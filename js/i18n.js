@@ -47,6 +47,10 @@ const translations = {
     f5_desc: "Proprietary image processing algorithms turn shadowed, wrinkled paper into crystal-clear laser-grade PDF prints.",
     f6_title: "VIP Reward Chest (Fair Monetization)",
     f6_desc: "No expensive recurring monthly subscriptions. Watch a quick 15-second sponsor video to claim 5 free high-speed scan credits instantly.",
+    f7_title: "Liquid Glass Navigation Dock",
+    f7_desc: "Ultra-smooth frosted glass refraction, fluid sliding indicator bubble, and a 1-tap quick action sheet for effortless scanning.",
+    f8_title: "Dynamic Island & Widgets",
+    f8_desc: "Live multi-page OCR compilation tracking on Dynamic Island, lock screen glanceable shortcuts, and iOS Action Button triggers.",
 
     demo_title: "Live Interactive Scanner Simulator",
     demo_subtitle: "Experience how on-device optical character recognition isolates text lines in real-time.",
@@ -174,6 +178,10 @@ modal_close: "Close"
     f5_desc: "Özel görüntü filtreleri gölgeli ve kırışık kağıtları lazer kalitesinde net PDF çıktısına dönüştürür.",
     f6_title: "Günün VIP Şans Sandığı (Adil Model)",
     f6_desc: "Pahalı haftalık aboneliklere zorlanmazsınız. 15 saniyelik sponsor videosu izleyin, anında +5 hızlı tarama kredisi kazanın.",
+    f7_title: "Likit Cam (Liquid Glass) Menü",
+    f7_desc: "Pürüzsüz buzlu cam kırılması, akışkan kayan gösterge balonu ve tek dokunuşla hızlı eylemler paneli.",
+    f8_title: "Dinamik Ada & Ekosistem Widgetları",
+    f8_desc: "Dinamik Ada üzerinde çok sayfalı OCR ilerleme takibi, kilit ekranı kısayolları ve Action Button eylemleri.",
 
     demo_title: "Canlı İnteraktif Tarayıcı Simülatörü",
     demo_subtitle: "Cihaz içi optik karakter tanımanın (OCR) metin satırlarını anlık olarak nasıl ayıkladığını canlı test edin.",
