@@ -97,6 +97,10 @@ const translations = {
     hub_rule_1: "1 Credit: On-Device OCR",
     hub_rule_2: "1 Credit: 2-in-1 Dual ID",
     hub_rule_3: "0 Credits: Unlimited PDF",
+    seo_title: "DocScan Offline - Intelligent Document Scanner & On-Device OCR",
+    seo_description: "100% Offline Document Scanner with On-Device Neural OCR, 2-in-1 ID Card scanning, biometric PIN vault, and e-signatures. Zero cloud data leaks.",
+    seo_keywords: "offline document scanner, on device ocr, private pdf scanner, id card scanner, sign pdf offline, secure document vault",
+    og_locale: "en_US",
 modal_close: "Close"
   },
 
@@ -192,6 +196,10 @@ modal_close: "Close"
     hub_rule_1: "1 Kredi: Cihaz İçi OCR",
     hub_rule_2: "1 Kredi: Çift Taraflı Kimlik",
     hub_rule_3: "0 Kredi: Sınırsız Standart PDF",
+    seo_title: "DocScan Offline - Akıllı Belge Tarayıcı & Cihaz İçi OCR",
+    seo_description: "%100 Çevrimdışı Belge Tarayıcı: Cihaz içi anlık OCR, 2'si 1 arada çift taraflı kimlik tarama, PIN kasası ve e-imza. Sıfır bulut veri sızıntısı.",
+    seo_keywords: "çevrimdışı belge tarayıcı, internetsiz ocr, gizli pdf tarama, kimlik tarama programı, güvenli belge kasası, e imza pdf",
+    og_locale: "tr_TR",
 modal_close: "Kapat"
   },
 
@@ -287,6 +295,10 @@ modal_close: "Kapat"
     hub_rule_1: "1 Credit: Lokale OCR",
     hub_rule_2: "1 Credit: 2-in-1 Ausweis",
     hub_rule_3: "0 Credits: Unbegrenztes PDF",
+    seo_title: "DocScan Offline - Intelligenter Dokumentenscanner & Lokale OCR",
+    seo_description: "100% Offline-Dokumentenscanner mit On-Device-OCR, 2-in-1-Ausweisscanner, PIN-Tresor und E-Signatur. Null Cloud-Datenübertragung.",
+    seo_keywords: "offline scanner app, lokale ocr texterkennung, privater pdf scanner, ausweis scanner 2 in 1, datenschutz dokumente",
+    og_locale: "de_DE",
 modal_close: "Schließen"
   },
 
@@ -382,6 +394,10 @@ modal_close: "Schließen"
     hub_rule_1: "1 Crédito: OCR en Dispositivo",
     hub_rule_2: "1 Crédito: DNI 2 en 1",
     hub_rule_3: "0 Créditos: PDF Estándar Ilimitado",
+    seo_title: "DocScan Offline - Escáner Inteligente de Documentos & OCR Local",
+    seo_description: "Escáner de documentos 100% sin conexión con OCR neuronal en el dispositivo, escaneo de DNI 2 en 1, bóveda PIN y firma digital. Cero nube.",
+    seo_keywords: "escaner offline documentos, ocr sin internet, escanear dni dos caras, pdf privado movil, firma digital offline",
+    og_locale: "es_ES",
 modal_close: "Cerrar"
   },
 
@@ -477,6 +493,10 @@ modal_close: "Cerrar"
     hub_rule_1: "1 Crédit: OCR Sur Appareil",
     hub_rule_2: "1 Crédit: ID 2-en-1",
     hub_rule_3: "0 Crédit: PDF Standard Illimité",
+    seo_title: "DocScan Offline - Scanner de Documents Intelligent & OCR Hors-Ligne",
+    seo_description: "Scanner 100% hors-ligne avec OCR sur l'appareil, scan de carte d'identité 2-en-1, coffre-fort PIN et signature électronique. Zéro cloud.",
+    seo_keywords: "scanner sans internet, ocr hors ligne, numériser carte d identite, coffre fort pdf prive, signature pdf mobile",
+    og_locale: "fr_FR",
 modal_close: "Fermer"
   },
 
@@ -572,6 +592,10 @@ modal_close: "Fermer"
     hub_rule_1: "1 Credito: OCR Sul Dispositivo",
     hub_rule_2: "1 Credito: Carta d Identità 2 in 1",
     hub_rule_3: "0 Crediti: PDF Illimitati",
+    seo_title: "DocScan Offline - Scanner Intelligente di Documenti & OCR Locale",
+    seo_description: "Scanner di documenti 100% offline con OCR sul dispositivo, scansione carta d'identità 2 in 1, cassaforte PIN e firma digitale. Zero cloud.",
+    seo_keywords: "scanner documenti offline, ocr locale senza internet, scansiona carta identita, cassaforte file pdf, firma elettronica",
+    og_locale: "it_IT",
 modal_close: "Chiudi"
   },
 
@@ -667,6 +691,10 @@ modal_close: "Chiudi"
     hub_rule_1: "1 Crédito: OCR no Dispositivo",
     hub_rule_2: "1 Crédito: RG/CNH 2 em 1",
     hub_rule_3: "0 Créditos: PDF Ilimitado",
+    seo_title: "DocScan Offline - Scanner Inteligente de Documentos & OCR no Celular",
+    seo_description: "Scanner de documentos 100% offline com OCR no dispositivo, digitalização de RG/CNH 2 em 1, cofre PIN e assinatura digital. Zero nuvem.",
+    seo_keywords: "scanner offline celular, ocr sem internet, digitalizar rg frente e verso, pdf seguro privado, assinatura digital pdf",
+    og_locale: "pt_BR",
 modal_close: "Fechar"
   },
 
@@ -762,6 +790,10 @@ modal_close: "Fechar"
     hub_rule_1: "1 Кредит: Локальный OCR",
     hub_rule_2: "1 Кредит: ID 2-в-1",
     hub_rule_3: "0 Кредитов: Безлимитный PDF",
+    seo_title: "DocScan Offline - Умный Сканер Документов & Локальный OCR",
+    seo_description: "100% офлайн сканер документов с локальным нейронным OCR, сканированием ID-карт 2-в-1, PIN-сейфом и цифровой подписью. Без облака.",
+    seo_keywords: "офлайн сканер документов, распознавание текста без интернета, сканер паспорта, защищенный сейф пдф, электронная подпись",
+    og_locale: "ru_RU",
 modal_close: "Закрыть"
   },
 
@@ -857,6 +889,10 @@ modal_close: "Закрыть"
     hub_rule_1: "1クレジット: 端末内OCR",
     hub_rule_2: "1クレジット: 2in1身分証明書",
     hub_rule_3: "0クレジット: 無制限PDF保存",
+    seo_title: "DocScan Offline - 高機能文書スキャナー & 端末内AI OCR",
+    seo_description: "完全オフライン文書スキャナー。端末内AI OCR、2in1両面身分証明書スキャン、暗号化PIN保管庫、電子署名機能。クラウド送信ゼロ。",
+    seo_keywords: "オフライン スキャナー, 端末内 ocr, 免許証 両面スキャン, プライベート pdf 保存, 電子サイン アプリ",
+    og_locale: "ja_JP",
 modal_close: "閉じる"
   },
 
@@ -952,6 +988,10 @@ modal_close: "閉じる"
     hub_rule_1: "1 رصيد: OCR محلي بالذكاء الاصطناعي",
     hub_rule_2: "1 رصيد: دمج البطاقات 2 في 1",
     hub_rule_3: "0 رصيد: مسح PDF غير محدود",
+    seo_title: "DocScan Offline - ماسح المستندات الذكي & استخراج النصوص محلياً",
+    seo_description: "ماسح مستندات ١٠٠٪ بدون إنترنت مع محرك OCR محلي، مسح بطاقات الهوية وجهين، خزنة PIN مشفرة وتوقيع إلكتروني. صفر سحابة.",
+    seo_keywords: "ماسح مستندات بدون نت, استخراج نصوص ocr محلي, مسح الهوية وجهين, خزنة ملفات مشفرة, توقيع عقود الكتروني",
+    og_locale: "ar_SA",
 modal_close: "إغلاق"
   }
 };
@@ -959,21 +999,32 @@ modal_close: "إغلاق"
 // Current active language
 let currentLang = 'en';
 
-// Supported language keys
+// Supported 10 language keys
 const supportedLangs = ['en', 'tr', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'ja', 'ar'];
 
 /**
- * Detect language from browser/device
+ * Detect language from browser/device with strict English fallback
  */
 function detectDeviceLanguage() {
-  // 1. Check localStorage first
-  const stored = localStorage.getItem('docscan_selected_lang');
-  if (stored && supportedLangs.includes(stored)) {
-    return stored;
-  }
+  // 1. Check URL query parameter (?lang=xx)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang && supportedLangs.includes(urlLang.toLowerCase())) {
+      return urlLang.toLowerCase();
+    }
+  } catch (e) {}
 
-  // 2. Check navigator.languages or navigator.language
-  const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+  // 2. Check localStorage for user preference
+  try {
+    const stored = localStorage.getItem('docscan_selected_lang');
+    if (stored && supportedLangs.includes(stored)) {
+      return stored;
+    }
+  } catch (e) {}
+
+  // 3. Inspect browser/device languages list (navigator.languages)
+  const browserLangs = navigator.languages || [navigator.language || navigator.userLanguage || ''];
   for (const rawLang of browserLangs) {
     if (!rawLang) continue;
     const code = rawLang.toLowerCase().split('-')[0].split('_')[0];
@@ -982,19 +1033,91 @@ function detectDeviceLanguage() {
     }
   }
 
-  // 3. Fallback to English
+  // 4. Strict Fallback: English (en) for any unsupported languages
   return 'en';
 }
 
 /**
- * Apply language to all elements with data-i18n attributes
+ * Dynamically update all SEO meta tags, canonical URL, and Schema.org
+ */
+function updateDynamicSEO(lang, dict) {
+  // 1. Update Document Title
+  if (dict.seo_title) {
+    document.title = dict.seo_title;
+  }
+
+  // 2. Update Meta Description & Keywords
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && dict.seo_description) {
+    metaDesc.setAttribute('content', dict.seo_description);
+  }
+
+  const metaKeywords = document.querySelector('meta[name="keywords"]');
+  if (metaKeywords && dict.seo_keywords) {
+    metaKeywords.setAttribute('content', dict.seo_keywords);
+  }
+
+  // 3. Update Open Graph Meta Tags
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle && dict.seo_title) {
+    ogTitle.setAttribute('content', dict.seo_title);
+  }
+
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc && dict.seo_description) {
+    ogDesc.setAttribute('content', dict.seo_description);
+  }
+
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale && dict.og_locale) {
+    ogLocale.setAttribute('content', dict.og_locale);
+  }
+
+  // 4. Update Twitter Card Tags
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle && dict.seo_title) {
+    twTitle.setAttribute('content', dict.seo_title);
+  }
+
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc && dict.seo_description) {
+    twDesc.setAttribute('content', dict.seo_description);
+  }
+
+  // 5. Update Canonical & URL parameter without page reload
+  try {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState({ lang }, '', url.toString());
+
+    const canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (canonicalEl) {
+      canonicalEl.setAttribute('href', url.toString());
+    }
+  } catch (e) {}
+
+  // 6. Update Schema.org JSON-LD description
+  try {
+    const jsonLdScript = document.getElementById('schema-software-app');
+    if (jsonLdScript) {
+      const data = JSON.parse(jsonLdScript.textContent);
+      data.description = dict.seo_description || data.description;
+      jsonLdScript.textContent = JSON.stringify(data, null, 2);
+    }
+  } catch (e) {}
+}
+
+/**
+ * Apply language to DOM and SEO metadata
  */
 function applyLanguage(lang) {
   if (!translations[lang]) {
-    lang = 'en';
+    lang = 'en'; // Strict fallback to English
   }
   currentLang = lang;
-  localStorage.setItem('docscan_selected_lang', lang);
+  try {
+    localStorage.setItem('docscan_selected_lang', lang);
+  } catch (e) {}
 
   const dict = translations[lang];
 
@@ -1025,11 +1148,14 @@ function applyLanguage(lang) {
     }
   });
 
-  // Update language selector UI
+  // Update current language label in UI
   const currentLangLabel = document.getElementById('current-lang-label');
   if (currentLangLabel && dict.lang_name) {
     currentLangLabel.textContent = dict.lang_name;
   }
+
+  // Dynamic SEO Meta & Canonical update
+  updateDynamicSEO(lang, dict);
 
   // Dispatch custom event for listeners
   window.dispatchEvent(new CustomEvent('docscan_lang_changed', { detail: { lang } }));

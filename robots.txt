@@ -1,0 +1,6 @@
+# robots.txt for DocScan Offline
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://binegocom.github.io/DocScan-Pages/sitemap.xml
