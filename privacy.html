@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - DocScan Offline (Apple & Google Play Compliant)</title>
+  <meta name="description" content="Official Privacy Policy for DocScan Offline. 100% On-Device Processing, Zero Cloud Storage, and full compliance with Apple Guideline 5.1.1 and Google Play Data Safety.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient-glow-1"></div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <span>DocScan Offline</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">← Back to Home</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="lang-selector-box">
+          <button id="lang-toggle-btn" class="lang-dropdown-btn" type="button" aria-label="Select Language">
+            <span>🌐</span>
+            <span id="current-lang-label">English</span>
+            <span style="font-size: 0.7rem;">▼</span>
+          </button>
+          
+          <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+            <button class="lang-option-btn" data-lang="en"><span class="lang-flag">🇺🇸</span> English</button>
+            <button class="lang-option-btn" data-lang="tr"><span class="lang-flag">🇹🇷</span> Türkçe</button>
+            <button class="lang-option-btn" data-lang="de"><span class="lang-flag">🇩🇪</span> Deutsch</button>
+            <button class="lang-option-btn" data-lang="es"><span class="lang-flag">🇪🇸</span> Español</button>
+            <button class="lang-option-btn" data-lang="fr"><span class="lang-flag">🇫🇷</span> Français</button>
+            <button class="lang-option-btn" data-lang="it"><span class="lang-flag">🇮🇹</span> Italiano</button>
+            <button class="lang-option-btn" data-lang="pt"><span class="lang-flag">🇧🇷</span> Português</button>
+            <button class="lang-option-btn" data-lang="ru"><span class="lang-flag">🇷🇺</span> Русский</button>
+            <button class="lang-option-btn" data-lang="ja"><span class="lang-flag">🇯🇵</span> 日本語</button>
+            <button class="lang-option-btn" data-lang="ar"><span class="lang-flag">🇸🇦</span> العربية</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="legal-page-header">
+      <span class="section-tag">LEGAL DISCLOSURE</span>
+      <h1 class="section-title">Privacy Policy</h1>
+      <p class="section-desc">Effective Date: October 7, 2026 • Last Updated: October 7, 2026</p>
+    </div>
+
+    <article class="legal-card-body">
+      <div class="legal-highlight-box">
+        <strong>Executive Summary (Zero-Cloud Architecture):</strong><br>
+        DocScan Offline is engineered with a strict <strong>Privacy-First & On-Device Processing architecture</strong>. We do NOT host external document servers. Your camera captures, scanned files, extracted OCR texts, and secret PIN codes remain <strong>100% inside your physical smartphone's sandbox</strong>. We never transmit, sell, or analyze your personal documents.
+      </div>
+
+      <h2>1. Apple App Store & Google Play Policy Compliance</h2>
+      <p>This Privacy Policy is drafted in strict adherence to:</p>
+      <ul>
+        <li><strong>Apple App Store Review Guidelines:</strong> Guideline 5.1.1 (Data Collection and Storage) and Guideline 5.1.2 (Data Use and Sharing).</li>
+        <li><strong>Google Play Developer Distribution Agreement:</strong> User Data Policy & Data Safety Section requirements.</li>
+        <li><strong>General Data Protection Regulation (GDPR - EU 2016/679):</strong> Articles 12, 13, 14, 17 (Right to be Forgotten).</li>
+        <li><strong>California Consumer Privacy Act (CCPA / CPRA).</strong></li>
+      </ul>
+
+      <h2>2. What Data We DO NOT Collect</h2>
+      <p>Because DocScan Offline operates offline without requiring user account registration:</p>
+      <ul>
+        <li><strong>No Account Information:</strong> No email, username, phone number, or password is ever requested or recorded.</li>
+        <li><strong>No Cloud Document Copies:</strong> Your scanned PDFs, images, contracts, and IDs are strictly processed in the volatile memory of your device and saved exclusively to the local application storage sandbox.</li>
+        <li><strong>No Biometric Records:</strong> Any biometric authentication (Face ID / Touch ID) is executed strictly by Apple iOS LocalAuthentication / Android BiometricPrompt framework; biometric signatures never leave device hardware secure enclaves.</li>
+      </ul>
+
+      <h2>3. Device Permissions & Transparent Justifications</h2>
+      <p>When you use DocScan Offline, the application may request specific on-device operating system permissions:</p>
+      <ul>
+        <li><strong>Camera Permission (<code>NSCameraUsageDescription</code> / <code>android.permission.CAMERA</code>):</strong><br>
+        Requested solely to enable the camera viewfinder to capture paper documents, contracts, and ID cards in real time. The camera feed is analyzed in volatile RAM and is never broadcast or streamed to external servers.</li>
+        <li><strong>Photo Library & Storage Permission (<code>NSPhotoLibraryUsageDescription</code> / <code>READ_MEDIA_IMAGES</code>):</strong><br>
+        Requested solely when you explicitly tap "Import from Gallery" or export a processed PDF to your device photo gallery or file system.</li>
+      </ul>
+
+      <h2>4. Offline OCR Engine & Text Processing</h2>
+      <p>All Optical Character Recognition (OCR) routines are powered by edge machine learning algorithms embedded directly within the application binary. No image data or extracted text strings are ever transmitted to any third-party translation or recognition API.</p>
+
+      <h2>5. Advertising & Third-Party Service Providers</h2>
+      <p>To keep the application free and eliminate mandatory recurring paywalls, DocScan Offline incorporates <strong>Google AdMob</strong> rewarded video ads:</p>
+      <ul>
+        <li><strong>User-Initiated Rewards:</strong> Watching rewarded ads is entirely voluntary. Users may watch a short 15-second sponsor video in exchange for +5 offline scan credits.</li>
+        <li><strong>Non-Personalized Telemetry:</strong> In compliance with Apple App Tracking Transparency (ATT) policies and Google Play Families guidelines, we configure ad requests to non-personalized ad delivery by default.</li>
+        <li><strong>AdMob Privacy Policy:</strong> Google AdMob may process non-sensitive device identifiers (such as IP address for coarse geo-location and device model). For further information, visit: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener" style="color: var(--emerald-neon);">Google Ads Policy</a>.</li>
+      </ul>
+
+      <h2>6. Data Retention & The Right to be Forgotten (GDPR Art. 17)</h2>
+      <p>Because all data lives solely in your device sandbox:</p>
+      <ul>
+        <li><strong>Instant Document Deletion:</strong> Deleting a document inside the DocScan Offline interface immediately and irreversibly purges the file from your local storage system.</li>
+        <li><strong>Application Uninstall:</strong> Uninstalling the application completely wipes all sandboxed database records, credits, cached images, and PDF files. No orphaned remnants remain on remote servers.</li>
+      </ul>
+
+      <h2>7. Children's Privacy (COPPA Compliance)</h2>
+      <p>DocScan Offline is a general utility scanner and is not directed at children under the age of 13. We do not knowingly collect or solicit personal information from minors.</p>
+
+      <h2>8. Changes to this Privacy Policy</h2>
+      <p>We may update our Privacy Policy periodically to reflect app updates or regulatory adjustments. Any modifications will be updated on this page with an updated "Last Updated" timestamp.</p>
+
+      <h2>9. Contact & Publisher Inquiries</h2>
+      <p>If you have questions, feedback, or legal inquiries concerning this Privacy Policy, please contact our privacy compliance team:</p>
+      <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle); padding: 20px; border-radius: 12px; margin-top: 16px;">
+        <strong>DocScan Offline Development Team</strong><br>
+        Email: <a href="mailto:privacy@docscan-offline.app" style="color: var(--emerald-neon);">privacy@docscan-offline.app</a><br>
+        Legal Inquiries: <a href="mailto:legal@docscan-offline.app" style="color: var(--emerald-neon);">legal@docscan-offline.app</a><br>
+        Repository: <a href="https://github.com" target="_blank" rel="noopener" style="color: var(--emerald-neon);">GitHub Open Ecosystem</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>© 2026 DocScan Offline. All rights reserved.</p>
+      <p><a href="index.html" style="color: var(--emerald-neon); text-decoration: none;">Return to Home</a> • <a href="terms.html" style="color: var(--emerald-neon); text-decoration: none;">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="js/sound-fx.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocScan Offline - Intelligent Document Scanner & On-Device OCR</title>
+  <meta name="description" content="100% Offline Document Scanner with Neural On-Device OCR, 2-in-1 ID Card scanning, biometric PIN vault, and e-signatures. Zero cloud latency, zero data leaks.">
+  <meta name="keywords" content="offline document scanner, on-device OCR, pdf scanner, id card scanner, flutter docscan, private pdf tool">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DocScan Offline - Private On-Device Document Scanner">
+  <meta property="og:description" content="Scan, extract text, sign, and organize documents with 0 cloud transmission. 100% on-device processing.">
+  <meta property="og:image" content="assets/screenshots/screenshot_home.png">
+
+  <!-- Google Fonts: Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ambient Neon Glow Effects -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        </div>
+        <span>DocScan Offline</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features" data-i18n="nav_features">Features</a></li>
+        <li><a href="#simulator" data-i18n="cta_live_demo">Live Demo</a></li>
+        <li><a href="#rewards" data-i18n="nav_rewards">Rewards & Credits</a></li>
+        <li><a href="#screenshots" data-i18n="nav_screenshots">Screenshots</a></li>
+        <li><a href="#security" data-i18n="nav_security">Security & Privacy</a></li>
+        <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Duolingo-style Sound FX Toggle -->
+        <button id="sound-toggle-btn" class="sound-toggle-btn" type="button" aria-label="Toggle Sound Effects">
+          <span id="sound-toggle-icon" class="sound-icon-anim">🔊</span>
+          <span id="sound-toggle-label">Sound ON</span>
+        </button>
+
+        <!-- 10-Language Selector Dropdown -->
+        <div class="lang-selector-box">
+          <button id="lang-toggle-btn" class="lang-dropdown-btn" type="button" aria-label="Select Language">
+            <span class="lang-globe-icon">🌐</span>
+            <span id="current-lang-label">English</span>
+            <span style="font-size: 0.7rem;">▼</span>
+          </button>
+          
+          <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+            <button class="lang-option-btn" data-lang="en"><span class="lang-flag">🇺🇸</span> English</button>
+            <button class="lang-option-btn" data-lang="tr"><span class="lang-flag">🇹🇷</span> Türkçe</button>
+            <button class="lang-option-btn" data-lang="de"><span class="lang-flag">🇩🇪</span> Deutsch</button>
+            <button class="lang-option-btn" data-lang="es"><span class="lang-flag">🇪🇸</span> Español</button>
+            <button class="lang-option-btn" data-lang="fr"><span class="lang-flag">🇫🇷</span> Français</button>
+            <button class="lang-option-btn" data-lang="it"><span class="lang-flag">🇮🇹</span> Italiano</button>
+            <button class="lang-option-btn" data-lang="pt"><span class="lang-flag">🇧🇷</span> Português</button>
+            <button class="lang-option-btn" data-lang="ru"><span class="lang-flag">🇷🇺</span> Русский</button>
+            <button class="lang-option-btn" data-lang="ja"><span class="lang-flag">🇯🇵</span> 日本語</button>
+            <button class="lang-option-btn" data-lang="ar"><span class="lang-flag">🇸🇦</span> العربية</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tagline-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="tagline">100% Offline • Zero-Cloud • Military-Grade Privacy</span>
+        </div>
+
+        <h1 class="hero-title" data-i18n="hero_title">Intelligent Document Scanner & PDF Foundry</h1>
+        
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Instant on-device OCR, 2-in-1 ID card scanning, biometric PIN vault, and e-signature pad. Zero cloud latency. Your documents never leave your phone.
+        </p>
+
+        <!-- Feature Badges -->
+        <div class="hero-badges-row">
+          <span class="feature-pill" data-i18n="badge_offline">⚡ 100% On-Device OCR</span>
+          <span class="feature-pill" data-i18n="badge_privacy">🛡️ Zero Cloud Data Leakage</span>
+          <span class="feature-pill pill-vip" data-i18n="badge_ad">🎁 Watch Short Video = Free Credits</span>
+        </div>
+
+        <!-- CTA Store Buttons -->
+        <div class="hero-cta-group">
+          <a href="#download" class="btn-store btn-apple">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.9.04-1.97.6-2.6 1.34-.56.64-.99 1.68-.86 2.71 1 .08 2-.45 2.54-1.18z"/></svg>
+            <span data-i18n="cta_appstore">Download on App Store</span>
+          </a>
+
+          <a href="#download" class="btn-store btn-google">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186c-.354-.363-.56-.867-.56-1.428V3.242c0-.561.206-1.065.56-1.428zm11.243 11.244l2.122-2.122-8.528-4.924 6.406 7.046zm0 1.884l-6.406 7.046 8.528-4.924-2.122-2.122zm2.181-1.058l3.187 1.84c.828.478.828 1.258 0 1.736l-3.187 1.84-2.062-2.062 2.062-2.062z"/></svg>
+            <span data-i18n="cta_playstore">Get it on Google Play</span>
+          </a>
+        </div>
+
+        <!-- Live Statistics Counter -->
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3 data-i18n="stat_accuracy">99.8%</h3>
+            <p data-i18n="stat_accuracy_desc">On-Device OCR Accuracy</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-i18n="stat_privacy">0 KB</h3>
+            <p data-i18n="stat_privacy_desc">Data Sent to Cloud (Zero-Cloud)</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-i18n="stat_speed">0.2s</h3>
+            <p data-i18n="stat_speed_desc">Ultra-Fast Offline Processing</p>
+          </div>
+          <div class="stat-item">
+            <h3 data-i18n="stat_languages">50+</h3>
+            <p data-i18n="stat_languages_desc">Offline Recognized Languages</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual: 3D Phone Chassis with Running App Screenshot -->
+      <div class="hero-visual-wrapper">
+        <div class="phone-device-card" id="interactive-phone">
+          <div class="phone-notch"></div>
+          
+          <div class="phone-screen-inner">
+            <!-- Laser scan sweep animation -->
+            <div class="laser-scan-bar"></div>
+            <div class="laser-glow-curtain"></div>
+            
+            <!-- Real App Screenshot from Running Flutter Simulator -->
+            <img src="assets/screenshots/screenshot_home.png" alt="DocScan Offline Running on iOS 18" class="phone-screen-img">
+          </div>
+        </div>
+
+        <!-- Floating Interactive Luxury Badges -->
+        <div class="floating-badge badge-top-right">
+          <div class="floating-badge-icon">⚡</div>
+          <div class="floating-badge-text">
+            <h4 data-i18n="badge_offline">100% On-Device OCR</h4>
+            <p>0ms Network Latency</p>
+          </div>
+        </div>
+
+        <div class="floating-badge badge-bottom-left">
+          <div class="floating-badge-icon">🎁</div>
+          <div class="floating-badge-text">
+            <h4 data-i18n="screen2_caption">VIP Chance Chest</h4>
+            <p>+5 Credits per video</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid Section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="nav_features">Features</span>
+        <h2 class="section-title" data-i18n="feat_title">Engineered for Complete Autonomy</h2>
+        <p class="section-desc" data-i18n="feat_subtitle">Say goodbye to invasive subscriptions and cloud surveillance. DocScan Offline runs completely inside your device sandbox.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Offline OCR -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🔍</div>
+          <h3 data-i18n="f1_title">100% Offline OCR Engine</h3>
+          <p data-i18n="f1_desc">Extract text from invoices, receipts, and contracts instantly without internet. Zero data leaks, zero cloud latency.</p>
+        </div>
+
+        <!-- Feature 2: 2-in-1 Dual-Sided ID -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🪪</div>
+          <h3 data-i18n="f2_title">2-in-1 Dual-Sided ID Scanner</h3>
+          <p data-i18n="f2_desc">Scan the front and back of ID cards, driver licenses, and passports, auto-aligned into a single high-resolution A4 PDF.</p>
+        </div>
+
+        <!-- Feature 3: PIN & Biometric Vault -->
+        <div class="feature-card">
+          <div class="feature-icon-box">🔒</div>
+          <h3 data-i18n="f3_title">Encrypted PIN & Vault Lock</h3>
+          <p data-i18n="f3_desc">Protect confidential documents with a local 4-digit PIN lock. Documents are isolated in an encrypted sandbox.</p>
+        </div>
+
+        <!-- Feature 4: E-Signature & Watermark -->
+        <div class="feature-card">
+          <div class="feature-icon-box">✍️</div>
+          <h3 data-i18n="f4_title">E-Signature & Watermark Stamper</h3>
+          <p data-i18n="f4_desc">Sign contracts on-screen with vector precision and stamp custom 'CONFIDENTIAL' security watermarks.</p>
+        </div>
+
+        <!-- Feature 5: Smart Filters -->
+        <div class="feature-card">
+          <div class="feature-icon-box">📄</div>
+          <h3 data-i18n="f5_title">Smart Filter & B&W Enhancement</h3>
+          <p data-i18n="f5_desc">Proprietary image processing algorithms turn shadowed, wrinkled paper into crystal-clear laser-grade PDF prints.</p>
+        </div>
+
+        <!-- Feature 6: VIP Reward Chest -->
+        <div class="feature-card card-gold">
+          <div class="feature-icon-box">👑</div>
+          <h3 data-i18n="f6_title">VIP Reward Chest (Fair Monetization)</h3>
+          <p data-i18n="f6_desc">No expensive recurring monthly subscriptions. Watch a quick 15-second sponsor video to claim 5 free high-speed scan credits instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Scanner Simulator -->
+  <section class="demo-section" id="simulator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="cta_live_demo">Try Interactive Demo</span>
+        <h2 class="section-title" data-i18n="demo_title">Live Interactive Scanner Simulator</h2>
+        <p class="section-desc" data-i18n="demo_subtitle">Experience how on-device optical character recognition isolates text lines in real-time.</p>
+      </div>
+
+      <div class="demo-container-box">
+        <!-- Interactive Paper Sheet Simulation -->
+        <div class="demo-visual-side">
+          <div class="demo-scan-line" id="demo-scan-line"></div>
+          
+          <div class="demo-paper-doc">
+            <div class="doc-header-line">
+              <span data-i18n="demo_doc_title">TAX INVOICE / SERVICE AGREEMENT</span>
+              <span>DOC-2026-9041</span>
+            </div>
+
+            <div class="doc-text-line ocr-target">
+              <span>Client: Acme Corporation Global</span>
+              <span class="ocr-tag-badge">Confidence: 99.8%</span>
+            </div>
+
+            <div class="doc-text-line ocr-target">
+              <span>Date: 2026-10-07 19:45:00</span>
+              <span class="ocr-tag-badge">Extracted</span>
+            </div>
+
+            <div class="doc-text-line ocr-target">
+              <span>Item: Enterprise Software License</span>
+              <span class="ocr-tag-badge">Verified</span>
+            </div>
+
+            <div class="doc-text-line ocr-target">
+              <span>Total Amount: $4,850.00 USD</span>
+              <span class="ocr-tag-badge">Total Match</span>
+            </div>
+
+            <div class="doc-text-line ocr-target">
+              <span>Status: Offline Verified • Zero Cloud Ping</span>
+              <span class="ocr-tag-badge">Encrypted</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="demo-control-side">
+          <h3 data-i18n="demo_title">Live Interactive Scanner Simulator</h3>
+          <p data-i18n="demo_subtitle">Experience how on-device optical character recognition isolates text lines in real-time without uploading anything to the internet.</p>
+
+          <div class="demo-btn-group">
+            <button id="btn-run-scan" class="btn-demo-action btn-demo-primary" type="button" data-i18n="demo_btn_scan">Trigger Scan & OCR</button>
+            <button id="btn-reset-scan" class="btn-demo-action btn-demo-secondary" type="button" data-i18n="demo_btn_reset">Reset Preview</button>
+          </div>
+
+          <div class="demo-status-box" id="demo-ocr-status" data-i18n="demo_ocr_status">
+            Ready to scan. Click the button above.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP Rewards & Credit Hub Section -->
+  <section class="rewards-hub-section" id="rewards">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="hub_badge">FAIR REWARDS • ZERO SUBSCRIPTION</span>
+        <h2 class="section-title" data-i18n="hub_title">VIP Rewards & Credit Hub Lounge</h2>
+        <p class="section-desc" data-i18n="hub_subtitle">No expensive recurring weekly subscriptions. Watch a 15-second sponsor video to claim 5 free high-speed scan credits instantly.</p>
+      </div>
+
+      <div class="hub-container-grid">
+        <!-- Interactive Credit Balance Card -->
+        <div class="hub-balance-card">
+          <div class="hub-top-pills">
+            <span class="hub-vip-pill" data-i18n="hub_tier_badge">👑 VIP TIER 1 • ACTIVE</span>
+            <span class="hub-offline-pill" data-i18n="hub_offline_badge">⚡ Offline Ready</span>
+          </div>
+
+          <div class="hub-balance-center">
+            <p class="hub-balance-title" data-i18n="hub_balance">Available Credit Balance</p>
+            <div class="hub-credit-display">
+              <span id="hub-credits-counter" class="hub-credit-number">3</span>
+              <span class="hub-credit-unit">Credits</span>
+            </div>
+          </div>
+
+          <div class="hub-streak-bar">
+            <div class="streak-flame">🔥</div>
+            <div class="streak-text-box">
+              <h4 data-i18n="hub_streak_txt">Daily Streak: 3 Days Active 🔥</h4>
+              <p data-i18n="hub_streak_sub">Log in tomorrow to unlock +2 surprise bonus credits!</p>
+            </div>
+          </div>
+
+          <!-- Interactive Claim Action Button -->
+          <div class="hub-action-box">
+            <button id="btn-claim-ad-credit" class="btn-claim-reward" type="button">
+              <span class="claim-icon">🎁</span>
+              <span id="btn-claim-text" data-i18n="hub_btn_watch">Watch 15s Video & Claim +5 Credits</span>
+            </button>
+            <p id="hub-claim-status" class="hub-claim-status">Click to test the rewarding video ad simulator</p>
+          </div>
+        </div>
+
+        <!-- How Credits Are Spent Matrix -->
+        <div class="hub-rules-card">
+          <h3 class="rules-header-title">Transparent Credit Utility</h3>
+          <p class="rules-header-sub">We believe in absolute transparency. Your credits never expire and work 100% offline.</p>
+
+          <div class="rules-list">
+            <div class="rule-item-box">
+              <div class="rule-icon-circle cyan">🔍</div>
+              <div class="rule-info">
+                <h4 data-i18n="hub_rule_1">1 Credit: On-Device Neural OCR</h4>
+                <p>Extract searchable, editable text from physical documents with 0 server latency.</p>
+              </div>
+            </div>
+
+            <div class="rule-item-box">
+              <div class="rule-icon-circle emerald">🪪</div>
+              <div class="rule-info">
+                <h4 data-i18n="hub_rule_2">1 Credit: 2-in-1 Dual-Sided ID Merge</h4>
+                <p>Capture front & back of ID cards auto-stitched onto a single pristine A4 document.</p>
+              </div>
+            </div>
+
+            <div class="rule-item-box">
+              <div class="rule-icon-circle gold">📄</div>
+              <div class="rule-info">
+                <h4 data-i18n="hub_rule_3">0 Credits: Unlimited Standard PDF</h4>
+                <p>Unlimited multi-page document scanning, camera edge cropping, and PDF exports are forever free.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real App Screenshot Gallery -->
+  <section class="screenshots-section" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="nav_screenshots">Screenshots</span>
+        <h2 class="section-title" data-i18n="screens_title">Authentic In-App Experience</h2>
+        <p class="section-desc" data-i18n="screens_subtitle">Captured directly from the running iOS 18 application. Obsidian Dark luxury interface.</p>
+      </div>
+
+      <div class="screenshots-grid">
+        <!-- 1. Full Dashboard -->
+        <div class="screen-card-box">
+          <div class="screen-img-wrap">
+            <img src="assets/screenshots/screenshot_home.png" alt="Home Dashboard & Document Grid" loading="lazy">
+          </div>
+          <div class="screen-card-caption" data-i18n="screen1_caption">Home Dashboard & Document Grid</div>
+        </div>
+
+        <!-- 2. VIP Chance Chest -->
+        <div class="screen-card-box">
+          <div class="screen-img-wrap">
+            <img src="assets/screenshots/feature_vip_chest.png" alt="VIP Chance Chest & Ad Credit Rewards" loading="lazy">
+          </div>
+          <div class="screen-card-caption" data-i18n="screen2_caption">VIP Chance Chest & Ad Credit Rewards</div>
+        </div>
+
+        <!-- 3. Document Card with OCR -->
+        <div class="screen-card-box">
+          <div class="screen-img-wrap">
+            <img src="assets/screenshots/feature_doc_card.png" alt="Document Card with Live OCR Badges" loading="lazy">
+          </div>
+          <div class="screen-card-caption" data-i18n="screen3_caption">Document Card with Live OCR Badges</div>
+        </div>
+
+        <!-- 4. Quick Actions -->
+        <div class="screen-card-box">
+          <div class="screen-img-wrap">
+            <img src="assets/screenshots/feature_actions.png" alt="Instant Document & ID Quick Launchers" loading="lazy">
+          </div>
+          <div class="screen-card-caption" data-i18n="screen4_caption">Instant Document & ID Quick Launchers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security & Privacy Guarantee Banner (Store Policy Compliance) -->
+  <section class="compliance-banner-section" id="security">
+    <div class="container">
+      <div class="compliance-box">
+        <div class="compliance-badge-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        
+        <h2 data-i18n="privacy_promise_title">Apple & Google Strict Compliance Guarantee</h2>
+        <p data-i18n="privacy_promise_desc">We adhere 100% to Apple App Store Guideline 5.1.1 and Google Play Console Data Safety Policies. Your files, camera stream, and extracted data never touch an external server.</p>
+
+        <div class="compliance-pills-row">
+          <span class="compliance-pill">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-i18n="privacy_pill_1">No Account Required</span>
+          </span>
+          <span class="compliance-pill">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-i18n="privacy_pill_2">Zero Analytics Trackers</span>
+          </span>
+          <span class="compliance-pill">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-i18n="privacy_pill_3">Local Sandboxed Storage</span>
+          </span>
+          <span class="compliance-pill">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span data-i18n="privacy_pill_4">Instant One-Tap Purge</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="nav_faq">FAQ</span>
+        <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq_q1">Do my scanned documents ever upload to a cloud server?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a1">Never. DocScan Offline operates entirely within your smartphone's sandboxed environment. All optical recognition, filtering, and PDF generation execute locally using device CPU/GPU.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq_q2">Why do you use rewarded video ads instead of subscriptions?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a2">Traditional scanner apps demand $10/week subscriptions. We believe scanning should be accessible to everyone. Our VIP Reward Chest gives you free scan credits simply by watching a non-intrusive short sponsored clip.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq_q3">What happens if I lose my phone or delete the app?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a3">Because we respect your privacy and never store files on remote servers, your documents exist solely on your physical device. We recommend backing up critical PDFs to your personal iCloud Drive or Google Drive.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span data-i18n="faq_q4">Is DocScan Offline compliant with GDPR, KVKK, and CCPA?</span>
+            <span class="faq-icon-arrow">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a4">Yes, 100%. Under GDPR/KVKK 'Right to be Forgotten', simply deleting a document inside the app physically purges all associated files and caches permanently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <span>DocScan Offline</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="privacy.html" data-i18n="nav_privacy">Privacy Policy</a></li>
+          <li><a href="terms.html" data-i18n="nav_terms">Terms of Service</a></li>
+          <li><a href="#features" data-i18n="nav_features">Features</a></li>
+          <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">All rights reserved. Powered by DocScan Offline Engine.</p>
+        <p data-i18n="footer_store_disclaimer">App Store is a trademark of Apple Inc. Google Play is a trademark of Google LLC.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/sound-fx.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
