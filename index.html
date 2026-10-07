@@ -126,6 +126,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+
+  <!-- Ambient Dynamic Cursor Spotlight -->
+  <div id="cursor-spotlight" class="cursor-spotlight"></div>
+
+  <!-- Global Action Toast Notification -->
+  <div id="toast-notification" class="toast-notification"></div>
+
   <!-- Ambient Neon Glow Effects -->
   <div class="ambient-glow-1"></div>
   <div class="ambient-glow-2"></div>
@@ -142,7 +151,7 @@
 
       <ul class="nav-links">
         <li><a href="#features" data-i18n="nav_features">Features</a></li>
-        <li><a href="#simulator" data-i18n="cta_live_demo">Live Demo</a></li>
+        <li><a href="#playground" data-i18n="nav_playground">Live Playground</a></li>
         <li><a href="#rewards" data-i18n="nav_rewards">Rewards & Credits</a></li>
         <li><a href="#screenshots" data-i18n="nav_screenshots">Screenshots</a></li>
         <li><a href="#security" data-i18n="nav_security">Security & Privacy</a></li>
@@ -150,6 +159,12 @@
       </ul>
 
       <div class="nav-actions">
+        <!-- Mobile QR Code Launcher Button -->
+        <button id="qr-toggle-btn" class="nav-qr-btn" type="button" aria-label="Open Mobile QR Code">
+          <span class="qr-btn-icon">📱</span>
+          <span data-i18n="qr_btn">Mobile QR</span>
+        </button>
+
         <!-- Duolingo-style Sound FX Toggle -->
         <button id="sound-toggle-btn" class="sound-toggle-btn" type="button" aria-label="Toggle Sound Effects">
           <span id="sound-toggle-icon" class="sound-icon-anim">🔊</span>
@@ -327,65 +342,450 @@
     </div>
   </section>
 
-  <!-- Interactive Live Scanner Simulator -->
-  <section class="demo-section" id="simulator">
+  <!-- Interactive Feature Playground (5 Live Labs) -->
+  <section class="playground-section" id="playground">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag" data-i18n="cta_live_demo">Try Interactive Demo</span>
-        <h2 class="section-title" data-i18n="demo_title">Live Interactive Scanner Simulator</h2>
-        <p class="section-desc" data-i18n="demo_subtitle">Experience how on-device optical character recognition isolates text lines in real-time.</p>
+        <span class="section-tag" data-i18n="play_tag">INTERACTIVE LAB • HANDS-ON DEMO</span>
+        <h2 class="section-title" data-i18n="play_title">Experience the Engine in Action</h2>
+        <p class="section-desc" data-i18n="play_subtitle">Test all 5 killer features directly inside your browser. Zero setup, instant response.</p>
       </div>
 
-      <div class="demo-container-box">
-        <!-- Interactive Paper Sheet Simulation -->
-        <div class="demo-visual-side">
-          <div class="demo-scan-line" id="demo-scan-line"></div>
-          
-          <div class="demo-paper-doc">
-            <div class="doc-header-line">
-              <span data-i18n="demo_doc_title">TAX INVOICE / SERVICE AGREEMENT</span>
-              <span>DOC-2026-9041</span>
+      <!-- Playground Navigation Tabs -->
+      <div class="playground-tabs-container">
+        <div class="playground-tabs-bar" role="tablist">
+          <button class="playground-tab-btn active" role="tab" aria-selected="true" data-tab="ocr">
+            <span class="tab-icon">⚡</span>
+            <span data-i18n="play_tab_ocr">Neural OCR</span>
+          </button>
+          <button class="playground-tab-btn" role="tab" aria-selected="false" data-tab="id">
+            <span class="tab-icon">🪪</span>
+            <span data-i18n="play_tab_id">Dual-Sided ID</span>
+          </button>
+          <button class="playground-tab-btn" role="tab" aria-selected="false" data-tab="sign">
+            <span class="tab-icon">✍️</span>
+            <span data-i18n="play_tab_sign">E-Signature Pad</span>
+          </button>
+          <button class="playground-tab-btn" role="tab" aria-selected="false" data-tab="vault">
+            <span class="tab-icon">🔒</span>
+            <span data-i18n="play_tab_vault">PIN Vault</span>
+          </button>
+          <button class="playground-tab-btn" role="tab" aria-selected="false" data-tab="chest">
+            <span class="tab-icon">🎁</span>
+            <span data-i18n="play_tab_chest">VIP Chest</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="playground-panels">
+        <!-- 1. NEURAL OCR TAB -->
+        <div class="playground-panel active" id="tab-panel-ocr" role="tabpanel">
+          <div class="play-grid-two">
+            <!-- Visual Document Simulator -->
+            <div class="play-card play-visual-card">
+              <div class="play-scan-beam" id="play-scan-beam"></div>
+              <div class="play-doc-paper">
+                <div class="play-doc-header">
+                  <span class="doc-badge">OFFICIAL INVOICE</span>
+                  <span class="doc-id">DOC-2026-9041</span>
+                </div>
+                <div class="play-doc-line ocr-target" data-key="client">
+                  <span class="doc-label">Client:</span>
+                  <span class="doc-val">Acme Corporation Global Inc.</span>
+                  <span class="doc-conf">99.8% Match</span>
+                </div>
+                <div class="play-doc-line ocr-target" data-key="date">
+                  <span class="doc-label">Date:</span>
+                  <span class="doc-val">2026-10-07 19:45:00 UTC</span>
+                  <span class="doc-conf">Verified</span>
+                </div>
+                <div class="play-doc-line ocr-target" data-key="item">
+                  <span class="doc-label">Service:</span>
+                  <span class="doc-val">Offline Edge OCR License Pack</span>
+                  <span class="doc-conf">Extracted</span>
+                </div>
+                <div class="play-doc-line ocr-target" data-key="amount">
+                  <span class="doc-label">Total:</span>
+                  <span class="doc-val">$4,850.00 USD (Paid)</span>
+                  <span class="doc-conf">100% Match</span>
+                </div>
+                <div class="play-doc-line ocr-target" data-key="privacy">
+                  <span class="doc-label">Privacy:</span>
+                  <span class="doc-val">Sandboxed Device Storage • 0ms Ping</span>
+                  <span class="doc-conf">Encrypted</span>
+                </div>
+              </div>
             </div>
 
-            <div class="doc-text-line ocr-target">
-              <span>Client: Acme Corporation Global</span>
-              <span class="ocr-tag-badge">Confidence: 99.8%</span>
-            </div>
+            <!-- OCR Controls & Extracted Output -->
+            <div class="play-card play-output-card">
+              <div class="play-card-header">
+                <h3>⚡ On-Device Neural OCR Engine</h3>
+                <span class="play-chip chip-green">Zero Cloud Transfer</span>
+              </div>
+              <p class="play-card-sub">Extract and digitize paper documents in 0.2 seconds completely offline.</p>
 
-            <div class="doc-text-line ocr-target">
-              <span>Date: 2026-10-07 19:45:00</span>
-              <span class="ocr-tag-badge">Extracted</span>
-            </div>
+              <div class="play-btn-row">
+                <button id="btn-play-run-ocr" class="btn-play-primary" type="button">
+                  <span class="btn-icon">⚡</span>
+                  <span data-i18n="play_ocr_btn">Extract Text (On-Device)</span>
+                </button>
+                <button id="btn-play-copy-ocr" class="btn-play-secondary" type="button">
+                  <span class="btn-icon">📋</span>
+                  <span data-i18n="play_ocr_copy">Copy Text</span>
+                </button>
+              </div>
 
-            <div class="doc-text-line ocr-target">
-              <span>Item: Enterprise Software License</span>
-              <span class="ocr-tag-badge">Verified</span>
-            </div>
+              <div class="play-ocr-status-bar" id="play-ocr-status-bar">
+                <span class="status-indicator"></span>
+                <span id="play-ocr-status-text">Ready to extract. Tap button to run neural OCR.</span>
+              </div>
 
-            <div class="doc-text-line ocr-target">
-              <span>Total Amount: $4,850.00 USD</span>
-              <span class="ocr-tag-badge">Total Match</span>
-            </div>
-
-            <div class="doc-text-line ocr-target">
-              <span>Status: Offline Verified • Zero Cloud Ping</span>
-              <span class="ocr-tag-badge">Encrypted</span>
+              <div class="play-code-box">
+                <div class="code-box-header">
+                  <span>EXTRACTED TEXT OUTPUT</span>
+                  <span id="ocr-extract-time">0.00s</span>
+                </div>
+                <textarea id="play-ocr-result-text" class="play-textarea" readonly>CLIENT: Acme Corporation Global Inc.
+DATE: 2026-10-07 19:45:00 UTC
+SERVICE: Offline Edge OCR License Pack
+TOTAL: $4,850.00 USD (Paid)
+SECURITY: 100% Offline Device Sandbox
+CONFIDENCE: 99.8% (TFLite Mobile Model)</textarea>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Controls -->
-        <div class="demo-control-side">
-          <h3 data-i18n="demo_title">Live Interactive Scanner Simulator</h3>
-          <p data-i18n="demo_subtitle">Experience how on-device optical character recognition isolates text lines in real-time without uploading anything to the internet.</p>
+        <!-- 2. DUAL-SIDED ID TAB -->
+        <div class="playground-panel" id="tab-panel-id" role="tabpanel">
+          <div class="play-grid-two">
+            <!-- 3D Flippable ID Card & A4 Preview Area -->
+            <div class="play-card play-visual-card id-visual-container">
+              <!-- Mode 1: 3D Flippable Single Card -->
+              <div class="id-card-perspective" id="id-single-card-view">
+                <div class="id-flipper-box" id="id-flipper">
+                  <!-- Front Side -->
+                  <div class="id-card-face id-face-front">
+                    <div class="id-face-header">
+                      <span class="id-flag">🇺🇸</span>
+                      <span class="id-authority">REPUBLIC IDENTITY CARD</span>
+                      <span class="id-chip"></span>
+                    </div>
+                    <div class="id-face-body">
+                      <div class="id-photo-frame">
+                        <div class="id-avatar-silhouette">👤</div>
+                      </div>
+                      <div class="id-meta">
+                        <div class="id-name">ALEXANDER MORGAN</div>
+                        <div class="id-num">ID: 948-2026-X81</div>
+                        <div class="id-sub">DOB: 14 MAY 1994</div>
+                        <div class="id-sub">NATIONALITY: USA</div>
+                      </div>
+                    </div>
+                    <div class="id-face-footer">
+                      <span class="id-holo">🛡️ BIOMETRIC CHIP</span>
+                      <span class="id-front-badge">FRONT SIDE</span>
+                    </div>
+                  </div>
 
-          <div class="demo-btn-group">
-            <button id="btn-run-scan" class="btn-demo-action btn-demo-primary" type="button" data-i18n="demo_btn_scan">Trigger Scan & OCR</button>
-            <button id="btn-reset-scan" class="btn-demo-action btn-demo-secondary" type="button" data-i18n="demo_btn_reset">Reset Preview</button>
+                  <!-- Back Side -->
+                  <div class="id-card-face id-face-back">
+                    <div class="id-magstripe"></div>
+                    <div class="id-back-body">
+                      <div class="id-sig-line">
+                        <span>Authorized Signature</span>
+                        <div class="id-signature-draw">Alexander Morgan</div>
+                      </div>
+                      <div class="id-barcode-box">
+                        <div class="id-barcode-lines"></div>
+                        <span class="id-mrz-code">IDUSA9482026X81&lt;&lt;482910&lt;&lt;&lt;&lt;&lt;&lt;&lt;940514</span>
+                      </div>
+                    </div>
+                    <div class="id-face-footer">
+                      <span class="id-holo">🔒 ISO/IEC 7810</span>
+                      <span class="id-back-badge">BACK SIDE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mode 2: Merged A4 Layout Preview -->
+              <div class="id-a4-preview hidden" id="id-a4-preview-view">
+                <div class="a4-sheet">
+                  <div class="a4-watermark">PRINT PREVIEW (A4)</div>
+                  <div class="a4-slot">
+                    <span class="a4-label">FRONT SIDE</span>
+                    <div class="mini-id-card mini-front">
+                      <span class="mini-flag">🇺🇸</span>
+                      <span>ALEXANDER MORGAN (ID: 948-2026-X81)</span>
+                    </div>
+                  </div>
+                  <div class="a4-divider"></div>
+                  <div class="a4-slot">
+                    <span class="a4-label">BACK SIDE</span>
+                    <div class="mini-id-card mini-back">
+                      <div class="mini-stripe"></div>
+                      <span>MRZ: IDUSA9482026X81&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="play-card play-output-card">
+              <div class="play-card-header">
+                <h3>🪪 2-in-1 Dual-Sided ID Merge</h3>
+                <span class="play-chip chip-gold">Smart Auto-Align</span>
+              </div>
+              <p class="play-card-sub" data-i18n="play_id_desc">Smart edge-detection automatically stitches both sides onto an official print-ready A4 layout.</p>
+
+              <div class="play-btn-row">
+                <button id="btn-id-flip" class="btn-play-primary" type="button">
+                  <span class="btn-icon">🔄</span>
+                  <span data-i18n="play_id_flip">Flip Card (Front / Back)</span>
+                </button>
+                <button id="btn-id-merge" class="btn-play-secondary" type="button">
+                  <span class="btn-icon">📄</span>
+                  <span data-i18n="play_id_merge">Snap to A4 Sheet Preview</span>
+                </button>
+              </div>
+
+              <div class="id-feature-highlights">
+                <div class="id-hl-item">
+                  <span class="id-hl-icon">📐</span>
+                  <div>
+                    <strong>Precision Edge Snapping</strong>
+                    <p>Detects ID angles and corrects perspective keystoning automatically.</p>
+                  </div>
+                </div>
+                <div class="id-hl-item">
+                  <span class="id-hl-icon">🖨️</span>
+                  <div>
+                    <strong>Standard Print Layout</strong>
+                    <p>Both sides centered with 300 DPI high-definition vector resolution.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="demo-status-box" id="demo-ocr-status" data-i18n="demo_ocr_status">
-            Ready to scan. Click the button above.
+        <!-- 3. E-SIGNATURE PAD TAB -->
+        <div class="playground-panel" id="tab-panel-sign" role="tabpanel">
+          <div class="play-grid-two">
+            <!-- Interactive Canvas Drawing Area -->
+            <div class="play-card play-visual-card">
+              <div class="sign-canvas-header">
+                <span class="sign-title" data-i18n="play_sign_title">Draw Your Signature Below</span>
+                <span class="sign-hint">Mouse or Touch Supported</span>
+              </div>
+              <div class="canvas-wrapper">
+                <canvas id="signature-canvas" width="460" height="180"></canvas>
+                <div class="canvas-baseline"></div>
+              </div>
+
+              <!-- Stamp Document Preview -->
+              <div class="contract-stamp-preview" id="contract-stamp-preview">
+                <div class="contract-preview-header">
+                  <span>SAMPLE CONFIDENTIAL CONTRACT</span>
+                  <span>PAGE 1 OF 1</span>
+                </div>
+                <p class="contract-text">
+                  The undersigned party hereby acknowledges that all scanned records are retained strictly on-device without transmission to any third-party infrastructure.
+                </p>
+                <div class="contract-signature-slot">
+                  <span class="slot-label">Authorized Signature:</span>
+                  <div class="slot-image-box" id="stamped-signature-display">
+                    <span class="slot-placeholder">Signature not applied yet</span>
+                  </div>
+                </div>
+                <!-- Dynamic Watermark Overlay -->
+                <div class="watermark-overlay hidden" id="contract-watermark-overlay">
+                  CONFIDENTIAL • OFFLINE ONLY
+                </div>
+              </div>
+            </div>
+
+            <!-- Signature Controls -->
+            <div class="play-card play-output-card">
+              <div class="play-card-header">
+                <h3>✍️ Vector E-Signature Foundry</h3>
+                <span class="play-chip chip-green">Zero Cloud Vector</span>
+              </div>
+              <p class="play-card-sub">Sign agreements with high-precision pen smoothing and embed security watermarks.</p>
+
+              <div class="play-btn-row">
+                <button id="btn-sign-apply" class="btn-play-primary" type="button">
+                  <span class="btn-icon">🔏</span>
+                  <span data-i18n="play_sign_apply">Stamp on Document</span>
+                </button>
+                <button id="btn-sign-clear" class="btn-play-secondary" type="button">
+                  <span class="btn-icon">🧹</span>
+                  <span data-i18n="play_sign_clear">Clear Ink</span>
+                </button>
+              </div>
+
+              <div class="watermark-toggle-row">
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" id="check-watermark">
+                  <span class="custom-checkbox"></span>
+                  <span data-i18n="play_sign_watermark">Add Security Watermark</span>
+                </label>
+              </div>
+
+              <div class="ink-color-picker-row">
+                <span class="color-picker-label">Ink Style:</span>
+                <button class="ink-dot active" data-color="#10B981" style="background:#10B981;" title="Emerald"></button>
+                <button class="ink-dot" data-color="#3B82F6" style="background:#3B82F6;" title="Classic Blue"></button>
+                <button class="ink-dot" data-color="#F8FAFC" style="background:#F8FAFC;" title="Pure White"></button>
+                <button class="ink-dot" data-color="#F59E0B" style="background:#F59E0B;" title="Gold"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. PIN VAULT TAB -->
+        <div class="playground-panel" id="tab-panel-vault" role="tabpanel">
+          <div class="play-grid-two">
+            <!-- Vault Safe Graphic & Documents -->
+            <div class="play-card play-visual-card vault-visual-box">
+              <div class="vault-chassis" id="vault-chassis">
+                <div class="vault-door" id="vault-door">
+                  <div class="vault-dial">
+                    <span class="vault-lock-icon" id="vault-lock-icon">🔒</span>
+                  </div>
+                  <h4 id="vault-door-status">VAULT LOCKED</h4>
+                  <div class="vault-pin-dots">
+                    <span class="pin-dot" id="pdot-0"></span>
+                    <span class="pin-dot" id="pdot-1"></span>
+                    <span class="pin-dot" id="pdot-2"></span>
+                    <span class="pin-dot" id="pdot-3"></span>
+                  </div>
+                </div>
+
+                <!-- Unlocked Secret Documents -->
+                <div class="vault-secret-content hidden" id="vault-secret-content">
+                  <div class="secret-banner">
+                    <span class="unlocked-icon">🔓</span>
+                    <h4 data-i18n="play_vault_unlocked">Vault Unlocked! 3 Confidential Contracts Decrypted 🔓</h4>
+                  </div>
+                  <div class="secret-docs-list">
+                    <div class="secret-doc-item">
+                      <span class="secret-doc-icon">🪪</span>
+                      <div>
+                        <strong>Passport_Biometric_Scan.pdf</strong>
+                        <p>AES-256 Encrypted • 1.8 MB</p>
+                      </div>
+                    </div>
+                    <div class="secret-doc-item">
+                      <span class="secret-doc-icon">📑</span>
+                      <div>
+                        <strong>Tax_Declaration_2025_Final.pdf</strong>
+                        <p>Zero Cloud Footprint • 840 KB</p>
+                      </div>
+                    </div>
+                    <div class="secret-doc-item">
+                      <span class="secret-doc-icon">📜</span>
+                      <div>
+                        <strong>Enterprise_NDA_Signed.pdf</strong>
+                        <p>Biometric Protected • 420 KB</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button id="btn-lock-vault-again" class="btn-play-secondary" type="button" style="margin-top:16px; width:100%;">
+                    🔒 Lock Vault Again
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- PIN Keypad -->
+            <div class="play-card play-output-card">
+              <div class="play-card-header">
+                <h3 data-i18n="play_vault_title">Enter 4-Digit Security PIN</h3>
+                <span class="play-chip chip-gold">AES-256 Sandboxed</span>
+              </div>
+              <p class="play-card-sub" data-i18n="play_vault_hint">Hint: Tap any 4 digits (e.g. 2 0 2 6)</p>
+
+              <div class="keypad-grid">
+                <button class="keypad-btn" data-key="1">1</button>
+                <button class="keypad-btn" data-key="2">2</button>
+                <button class="keypad-btn" data-key="3">3</button>
+                <button class="keypad-btn" data-key="4">4</button>
+                <button class="keypad-btn" data-key="5">5</button>
+                <button class="keypad-btn" data-key="6">6</button>
+                <button class="keypad-btn" data-key="7">7</button>
+                <button class="keypad-btn" data-key="8">8</button>
+                <button class="keypad-btn" data-key="9">9</button>
+                <button class="keypad-btn keypad-clear" data-key="C">C</button>
+                <button class="keypad-btn" data-key="0">0</button>
+                <button class="keypad-btn keypad-backspace" data-key="B">⌫</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. VIP CHEST TAB -->
+        <div class="playground-panel" id="tab-panel-chest" role="tabpanel">
+          <div class="play-grid-two">
+            <!-- 3D Golden Chest Visual -->
+            <div class="play-card play-visual-card chest-visual-container">
+              <div class="golden-chest-wrapper" id="playground-chest-card">
+                <div class="chest-halo"></div>
+                <div class="chest-box" id="interactive-golden-chest">
+                  <div class="chest-lid">
+                    <span class="chest-clasp"></span>
+                  </div>
+                  <div class="chest-base">
+                    <span class="chest-lock">👑</span>
+                  </div>
+                </div>
+                <div class="chest-sparkles">✨ ✨ ✨</div>
+              </div>
+              <p class="chest-instruction-text" data-i18n="play_chest_tap">Tap Golden Chest to Open & Win</p>
+            </div>
+
+            <!-- Chest Status & Rewards Summary -->
+            <div class="play-card play-output-card">
+              <div class="play-card-header">
+                <h3>🎁 VIP Chance Chest & Streak</h3>
+                <span class="play-chip chip-gold">Dopamine Fanfare</span>
+              </div>
+              <p class="play-card-sub">Interactive simulation of our rewarded video credit mechanism. Every open drops high-speed offline scan credits!</p>
+
+              <div class="chest-reward-banner hidden" id="chest-reward-banner">
+                <div class="reward-banner-icon">🎉</div>
+                <div class="reward-banner-info">
+                  <h4 data-i18n="play_chest_claimed">VIP Reward Claimed: +5 Offline Credits! 🎉</h4>
+                  <p>Duolingo-style audio fanfare unlocked!</p>
+                </div>
+              </div>
+
+              <div class="chest-live-stats">
+                <div class="cstat-item">
+                  <span class="cstat-label">Playground Credit Balance</span>
+                  <div class="cstat-val">
+                    <span id="playground-credit-val">3</span>
+                    <small>Credits</small>
+                  </div>
+                </div>
+                <div class="cstat-item">
+                  <span class="cstat-label">Daily Flame Streak</span>
+                  <div class="cstat-val">
+                    <span style="color:#F59E0B;">3 Days</span>
+                    <small>🔥 Active</small>
+                  </div>
+                </div>
+              </div>
+
+              <button id="btn-chest-trigger" class="btn-play-primary" type="button" style="margin-top:20px;">
+                <span class="btn-icon">🎁</span>
+                <span>Open Golden Chest</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -626,6 +1026,23 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile QR Code Modal -->
+  <div id="qr-modal" class="qr-modal-backdrop" aria-hidden="true">
+    <div class="qr-modal-dialog">
+      <button id="qr-modal-close-btn" class="qr-modal-close" aria-label="Close Modal">&times;</button>
+      <div class="qr-modal-header">
+        <span class="qr-modal-badge">📱 INSTANT MOBILE DEMO</span>
+        <h3 data-i18n="qr_modal_title">Scan QR Code on Your Mobile</h3>
+        <p data-i18n="qr_modal_desc">Point your iPhone or Android camera to open this web showcase instantly.</p>
+      </div>
+      <div class="qr-image-container">
+        <img src="assets/qr_code.svg" alt="DocScan Offline Web Showcase QR Code" class="qr-code-img">
+      </div>
+      <p class="qr-url-text">https://binegocom.github.io/DocScan-Pages/</p>
+      <button id="qr-modal-done-btn" class="btn-qr-done" data-i18n="qr_close">Close</button>
+    </div>
+  </div>
 
   <script src="js/sound-fx.js"></script>
   <script src="js/i18n.js"></script>
